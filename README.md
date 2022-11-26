@@ -2,7 +2,7 @@
 
 Get data dari https://swapi.dev/api/species/
 
-\n Menu :
+Menu :
 - Splash Screen
 - Home Page
 - Detail Page
