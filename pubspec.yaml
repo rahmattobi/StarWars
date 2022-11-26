@@ -13,7 +13,7 @@ dependencies:
   google_fonts: ^3.0.1
   http: ^0.13.5
   liquid_swipe: ^3.0.0
-  smooth_page_indicator: ^1.0.0+2
+  lottie: ^2.0.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -24,3 +24,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/lottie/

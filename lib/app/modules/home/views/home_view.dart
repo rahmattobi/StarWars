@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:starwars/app/data/models/species_m.dart';
 import 'package:starwars/theme.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -54,7 +55,7 @@ class HomeView extends GetView<HomeController> {
             ),
             Expanded(
               child: FutureBuilder<List<Species>?>(
-                // future: controller.getAllSpecies(),
+                future: controller.getAllSpecies(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(
@@ -75,7 +76,10 @@ class HomeView extends GetView<HomeController> {
 
                       return ListTile(
                         onTap: () {
-                          
+                          Get.toNamed(
+                            Routes.detail,
+                            arguments: species,
+                          );
                         },
                         leading: CircleAvatar(
                           backgroundColor: Colors.orange,
