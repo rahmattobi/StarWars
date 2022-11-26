@@ -39,6 +39,7 @@ class DetailView extends GetView<DetailController> {
               child: Lottie.asset('assets/lottie/starwars.json'),
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -52,6 +53,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -59,6 +61,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -72,6 +75,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -79,6 +83,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -92,6 +97,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -99,6 +105,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -112,6 +119,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.justify,
                 ),
               ),
             ),
@@ -119,6 +127,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -132,6 +141,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -139,6 +149,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -152,6 +163,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -159,6 +171,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -172,6 +185,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -179,6 +193,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -192,6 +207,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),
@@ -199,6 +215,7 @@ class DetailView extends GetView<DetailController> {
               height: 10,
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -212,6 +229,7 @@ class DetailView extends GetView<DetailController> {
                     fontWeight: bold,
                     fontSize: 16,
                   ),
+                  textAlign: TextAlign.start,
                 ),
               ),
             ),

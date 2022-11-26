@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:starwars/app/data/models/species_m.dart';
 import 'package:starwars/theme.dart';
 
@@ -58,9 +59,26 @@ class HomeView extends GetView<HomeController> {
                 future: controller.getAllSpecies(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
+                    return ListView.builder(
+                        itemCount: 30,
+                        itemBuilder: (context, index) {
+                          return Shimmer.fromColors(
+                            baseColor: abu,
+                            highlightColor: abuDark,
+                            child: ListTile(
+                              leading: const CircleAvatar(),
+                              title: Container(
+                                width: double.infinity,
+                                height: 10,
+                                color: whiteColor,
+                              ),
+                              subtitle: Container(
+                                height: 10,
+                                color: abu,
+                              ),
+                            ),
+                          );
+                        });
                   }
 
                   // untuk mengcheck apakah ada data
