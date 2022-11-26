@@ -1,7 +1,8 @@
 # starwars
 
 Get data dari https://swapi.dev/api/species/
-Menu :
+
+\n Menu :
 - Splash Screen
 - Home Page
 - Detail Page
@@ -13,4 +14,5 @@ Menu :
 ![image](https://user-images.githubusercontent.com/49316783/204096649-ee981af5-b258-4833-9a57-8d2f8abcbf76.png)
 ![image](https://user-images.githubusercontent.com/49316783/204096673-cb40782b-0b95-4179-887a-5c6f9d11fec3.png)
 ![image](https://user-images.githubusercontent.com/49316783/204096689-44de87b0-e428-40eb-b9b8-bcbde6ff6007.png)
+![image](https://user-images.githubusercontent.com/49316783/204096721-a14f756a-6350-42c0-92d7-f2c285fe19b2.png)
 
