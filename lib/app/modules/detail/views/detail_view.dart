@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:starwars/app/data/models/planet_m.dart';
 import 'package:starwars/app/data/models/species_m.dart';
+import 'package:starwars/app/modules/widget/planet_card.dart';
+import 'package:starwars/app/modules/widget/species_card.dart';
 import 'package:starwars/theme.dart';
 
 import '../controllers/detail_controller.dart';
@@ -38,201 +41,71 @@ class DetailView extends GetView<DetailController> {
               width: double.infinity,
               child: Lottie.asset('assets/lottie/starwars.json'),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Name Species : ${data.name}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
+            SpeciesCard(
+              name: data.name,
+              classification: data.classification,
+              designation: data.designation,
+              average: data.averageHeight,
+              skinC: data.skinColors,
+              hairC: data.hairColors,
+              eyeC: data.eyeColors,
+              averageL: data.averageLifespan,
+              language: data.language,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Planet',
+              style: whiteTextStyle.copyWith(
+                fontSize: 20,
+                fontWeight: bold,
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Classification : ${data.classification}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Designation : ${data.designation}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'average height : ${data.averageHeight}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.justify,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Skin Colors : ${data.skinColors}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Hair Colors : ${data.hairColors}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Eye Colors : ${data.eyeColors}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Average Lifespan : ${data.averageLifespan}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: abuColor.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Language : ${data.language}',
-                  style: whiteTextStyle.copyWith(
-                    fontWeight: bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
+            FutureBuilder<Planets>(
+              future: controller.getPlanet(data.homeworld!),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+
+                // untuk mengcheck apakah ada data
+                if (!snapshot.hasData) {
+                  return const Center(
+                    child: Text('Tidak Mempunyai data'),
+                  );
+                }
+
+                return ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    if (snapshot.data!.name!.isEmpty) {
+                      return const SizedBox();
+                    }
+
+                    print(snapshot.data!.orbitalPeriod);
+                    return PlanetCard(
+                      name: snapshot.data!.name,
+                      rotation: snapshot.data!.rotationPeriod,
+                      orbital: snapshot.data!.orbitalPeriod,
+                      diameter: snapshot.data!.orbitalPeriod,
+                      climate: snapshot.data!.climate,
+                      gravity: snapshot.data!.gravity,
+                      terrain: snapshot.data!.terrain,
+                      surface: snapshot.data!.surfaceWater,
+                      population: snapshot.data!.population,
+                    );
+                  },
+                );
+              },
+            )
           ],
         ),
       ),

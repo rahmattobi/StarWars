@@ -1,13 +1,8 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:starwars/app/data/models/species_m.dart';
 
 import 'app/routes/app_pages.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 
 void main() async {
   runApp(
@@ -19,3 +14,13 @@ void main() async {
     ),
   );
 }
+
+// import 'dart:convert';
+// import 'package:http/http.dart' as http;
+// void main() async {
+
+//   Uri url = Uri.parse('https://swapi.dev/api/planets/9/');
+//   var res = await http.get(url);
+//   Map<String, dynamic> data = jsonDecode(res.body) as Map<String, dynamic>;
+//   print(data);
+// }
