@@ -12,7 +12,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const splashScreen = Routes.splashScreen;
+  static const splashScreen = Routes.home;
 
   static final routes = [
     GetPage(

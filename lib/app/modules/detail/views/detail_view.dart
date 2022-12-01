@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shimmer/shimmer.dart';
+import 'package:starwars/app/data/models/planet_m.dart';
 import 'package:starwars/app/data/models/species_m.dart';
+import 'package:starwars/app/modules/widget/planets_card.dart';
 import 'package:starwars/app/modules/widget/species_card.dart';
 import 'package:starwars/theme.dart';
 
@@ -30,9 +33,6 @@ class DetailView extends GetView<DetailController> {
           vertical: 10,
         ),
         child: ListView(
-          padding: const EdgeInsets.only(
-            bottom: 10,
-          ),
           children: [
             SizedBox(
               height: 250,
@@ -53,6 +53,78 @@ class DetailView extends GetView<DetailController> {
             const SizedBox(
               height: 10,
             ),
+            Text(
+              'Planet',
+              style: whiteTextStyle.copyWith(
+                fontWeight: bold,
+                fontSize: 18,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            if (data.homeworld!.isEmpty)
+              Text(
+                'Planet tidak ada',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 18,
+                ),
+              )
+            else
+              SizedBox(
+                height: 550,
+                child: FutureBuilder<Planet>(
+                  future: controller.getPlanet(data.homeworld!),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        itemCount: 1,
+                        itemBuilder: (context, index) {
+                          return Shimmer.fromColors(
+                            baseColor: abu,
+                            highlightColor: abuDark,
+                            child: Container(
+                              height: 500,
+                              width: double.infinity,
+                              padding: const EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                color: whiteColor,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    }
+
+                    // untuk mengcheck apakah ada data
+                    if (!snapshot.hasData) {
+                      return const Center(
+                        child: Text('Tidak Mempunyai data'),
+                      );
+                    }
+                    return ListView.builder(
+                      itemCount: 1,
+                      shrinkWrap: false,
+                      itemBuilder: (context, index) {
+                        return PlanetCard(
+                          name: snapshot.data!.name,
+                          rotationP: snapshot.data!.rotationPeriod,
+                          orbitalP: snapshot.data!.orbitalPeriod,
+                          diameter: snapshot.data!.diameter,
+                          climate: snapshot.data!.climate,
+                          gravity: snapshot.data!.gravity,
+                          terrain: snapshot.data!.terrain,
+                          surfaceW: snapshot.data!.surfaceWater,
+                          population: snapshot.data!.population,
+                        );
+                      },
+                    );
+                  },
+                ),
+              ),
           ],
         ),
       ),

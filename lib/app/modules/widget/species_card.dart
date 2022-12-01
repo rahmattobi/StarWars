@@ -30,199 +30,301 @@ class SpeciesCard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Name Species : ${name.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Name ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                name.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Classification : ${classification.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Classification ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                classification.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Designation : ${designation.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Designation ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                designation.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'average height : ${average.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Average ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.justify,
-            ),
+              Text(
+                average.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Skin Colors : ${skinC.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Skin Colors ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                skinC.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Hair Colors : ${hairC.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Hair Colors ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                hairC.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Eye Colors : ${eyeC.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Eye Color ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                eyeC.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Average Lifespan : ${averageL.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Average Lifespan ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                averageL.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
         ),
         const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          height: 50,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 10,
+          ),
           width: double.infinity,
           decoration: BoxDecoration(
             color: abuColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              'Language : ${language.toString()}',
-              style: whiteTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Language ',
+                style: whiteTextStyle.copyWith(
+                  fontWeight: medium,
+                ),
               ),
-              textAlign: TextAlign.start,
-            ),
+              Text(
+                language.toString(),
+                style: orangeTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
           ),
+        ),
+        const SizedBox(
+          height: 10,
         ),
       ],
     );

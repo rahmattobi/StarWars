@@ -41,7 +41,7 @@ class Species {
     hairColors = json?['hair_colors'];
     eyeColors = json?['eye_colors'];
     averageLifespan = json?['average_lifespan'];
-    homeworld = json?['homeworld'];
+    homeworld = json?['homeworld'] ?? '';
     language = json?['language'];
     people = json?['people'].cast<String>();
     films = json?['films'].cast<String>();
@@ -51,7 +51,7 @@ class Species {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data =  <String, dynamic>{};
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['name'] = name;
     data['classification'] = classification;
     data['designation'] = designation;
