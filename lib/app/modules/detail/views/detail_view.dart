@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:starwars/app/data/models/film_m.dart';
 import 'package:starwars/app/data/models/people_m.dart';
 import 'package:starwars/app/data/models/planet_m.dart';
 import 'package:starwars/app/data/models/species_m.dart';
+import 'package:starwars/app/modules/widget/film_card.dart';
 import 'package:starwars/app/modules/widget/people_card.dart';
 import 'package:starwars/app/modules/widget/planets_card.dart';
 import 'package:starwars/app/modules/widget/species_card.dart';
@@ -202,7 +204,75 @@ class DetailView extends GetView<DetailController> {
                       );
                     },
                   ),
-                )
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Films',
+                  style: whiteTextStyle.copyWith(
+                    fontWeight: bold,
+                    fontSize: 18,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: 190,
+                  child: FutureBuilder<List<Film>>(
+                    future: controller.getFilm(data.films!),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Shimmer.fromColors(
+                              baseColor: abu,
+                              highlightColor: abuDark,
+                              child: Container(
+                                margin: const EdgeInsets.all(8),
+                                height: 200,
+                                width: 250,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: whiteColor,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }
+
+                      // untuk mengcheck apakah ada data
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: Text(
+                            'Tidak Mempunyai data',
+                            style: whiteTextStyle.copyWith(
+                              fontSize: 18,
+                              fontWeight: bold,
+                            ),
+                          ),
+                        );
+                      }
+                      return ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          Film film = snapshot.data![index];
+                          return FilmCard(
+                            title: film.title,
+                            director: film.director,
+                            producer: film.producer,
+                            date: film.releaseDate,
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           ),

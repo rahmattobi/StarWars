@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:starwars/app/data/models/film_m.dart';
 import 'package:starwars/app/data/models/people_m.dart';
 
 import '../../../data/models/planet_m.dart';
@@ -25,5 +26,19 @@ class DetailController extends GetxController {
     }
 
     return people;
+  }
+
+  Future<List<Film>> getFilm(List<String> urls) async {
+    List<Film> film = [];
+
+    for (var i = 0; i < urls.length; i++) {
+      Uri url = Uri.parse(urls[i].toString());
+      var res = await http.get(url);
+      Map<String, dynamic> data = jsonDecode(res.body) as Map<String, dynamic>;
+      Film allFilm = Film.fromJson(data);
+      film.add(allFilm);
+    }
+
+    return film;
   }
 }

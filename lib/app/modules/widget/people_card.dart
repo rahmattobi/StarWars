@@ -40,11 +40,14 @@ class PeopleCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Name : ${name.toString()}',
-            style: whiteTextStyle.copyWith(
-              fontSize: 16,
-              fontWeight: medium,
+            name.toString(),
+            style: orangeTextStyle.copyWith(
+              fontSize: 18,
+              fontWeight: bold,
             ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Text(
             'Height : ${height.toString()}',
