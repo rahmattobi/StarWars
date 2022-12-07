@@ -43,8 +43,8 @@ class Species {
     averageLifespan = json?['average_lifespan'];
     homeworld = json?['homeworld'] ?? '';
     language = json?['language'];
-    people = json?['people'].cast<String>();
-    films = json?['films'].cast<String>();
+    people = List<String>.from(json?["people"].map((x) => x));
+    films = List<String>.from(json?["films"].map((x) => x));
     created = json?['created'];
     edited = json?['edited'];
     url = json?['url'];

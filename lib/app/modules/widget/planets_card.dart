@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:starwars/theme.dart';
 
+// ignore: must_be_immutable
 class PlanetCard extends StatelessWidget {
   PlanetCard(
       {super.key,

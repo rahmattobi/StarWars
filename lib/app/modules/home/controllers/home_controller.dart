@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:starwars/app/data/models/species_m.dart';
 
 class HomeController extends GetxController {
+  
   Future<List<Species>?> getAllSpecies() async {
     Uri url = Uri.parse('https://swapi.dev/api/species/');
     var res = await http.get(url);

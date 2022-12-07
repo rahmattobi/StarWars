@@ -17,10 +17,10 @@ void main() async {
 
 // import 'dart:convert';
 // import 'package:http/http.dart' as http;
-// void main() async {
 
-//   Uri url = Uri.parse('https://swapi.dev/api/planets/9/');
+// void main() async {
+//   Uri url = Uri.parse('https://swapi.dev/api/species/');
 //   var res = await http.get(url);
-//   Map<String, dynamic> data = jsonDecode(res.body) as Map<String, dynamic>;
-//   print(data);
+//   List data = (jsonDecode(res.body) as Map<String, dynamic>)['results'];
+//   print(data[2]['people']);
 // }
